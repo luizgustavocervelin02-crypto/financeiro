@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="financeAiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="#0b0f19" />
+  <rect width="512" height="512" rx="128" fill="none" stroke="url(#financeAiGrad)" stroke-width="8" opacity="0.3" />
+
+  <!-- Background glowing circle -->
+  <circle cx="256" cy="256" r="180" fill="url(#financeAiGrad)" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Stylized F and AI Brain/Chart Symbol -->
+  <g transform="translate(64, 64) scale(0.75)">
+    <!-- Card / Shield base -->
+    <path d="M60 120 C60 80, 80 60, 120 60 L392 60 C432 60, 452 80, 452 120 L452 392 C452 432, 432 452, 392 452 L120 452 C80 452, 60 432, 60 392 Z" fill="#111827" stroke="url(#financeAiGrad)" stroke-width="12" />
+
+    <!-- Upward Trend Line with Nodes -->
+    <path d="M120 360 L200 290 L280 320 L392 180" fill="none" stroke="url(#financeAiGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Dots / Sparkles -->
+    <circle cx="120" cy="360" r="14" fill="#10b981" />
+    <circle cx="200" cy="290" r="14" fill="#06b6d4" />
+    <circle cx="280" cy="320" r="14" fill="#8b5cf6" />
+    <circle cx="392" cy="180" r="18" fill="#10b981" filter="url(#glow)" />
+
+    <!-- AI Sparkle star top right -->
+    <path d="M392 110 L402 135 L427 145 L402 155 L392 180 L382 155 L357 145 L382 135 Z" fill="#fbbf24" />
+    
+    <!-- Stylized Currency Sign -->
+    <text x="140" y="220" font-family="system-ui, sans-serif" font-weight="900" font-size="110" fill="#ffffff" opacity="0.9">R$</text>
+  </g>
+</svg>
